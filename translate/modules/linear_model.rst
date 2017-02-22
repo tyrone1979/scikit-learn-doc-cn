@@ -931,7 +931,7 @@ of a given degree.  It can be used as follows::
            [  1.,   2.,   3.,   4.,   6.,   9.],
            [  1.,   4.,   5.,  16.,  20.,  25.]])
 
-特征向量 ``X`` 已经从 :math:`[1, x_1, x_2, x_1^2, x_1 x_2, x_2^2]` 转换为 :math:`[x_1, x_2]` ，
+特征向量 ``X`` 已经从 :math:`[x_1, x_2]` 转换为:math:`[1, x_1, x_2, x_1^2, x_1 x_2, x_2^2]`  ，
 并且可以使用任何线性模型来处理。
 
 这类预处理可以使用 :ref:`Pipeline <pipeline>` 工具来 streamline。表达一个简单的多项式的单一的对象可以通过下列来创建和使用:
@@ -984,6 +984,5 @@ This way, we can solve the XOR problem with a linear classifier::
     >>> clf = Perceptron(fit_intercept=False, n_iter=10, shuffle=False).fit(X, y)
     >>> clf.score(X, y)
     1.0
-
 
 
